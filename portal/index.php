@@ -1,0 +1,164 @@
+<?php
+include "../header.php"
+?>
+<!DOCTYPE html>
+<!-- saved from url=(0047)<?php echo $url ?>/portal/search.php -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../templates/equinox/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <title>Appointment Booking</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #17a2b8;
+            height: 100vh;
+            background-image: url(./search_files/index2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #login .container #login-row #login-column #login-box {
+            margin-top: 120px;
+            max-width: 600px;
+            height: 320px;
+            border: 1px solid #9C9C9C;
+            background-color: #EAEAEA;
+        }
+
+        #login .container #login-row #login-column #login-box #login-form {
+            padding: 20px;
+        }
+
+        #login .container #login-row #login-column #login-box #login-form #register-link {
+            margin-top: -85px;
+        }
+
+        .main-body {
+            padding: 15px;
+        }
+
+        .card {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 0 solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+        }
+
+        .card-body {
+            flex: 1 1 auto;
+            min-height: 1px;
+            padding: 1rem;
+        }
+
+        .gutters-sm {
+            margin-right: -8px;
+            margin-left: -8px;
+        }
+
+        .gutters-sm>.col,
+        .gutters-sm>[class*=col-] {
+            padding-right: 8px;
+            padding-left: 8px;
+        }
+
+        .mb-3,
+        .my-3 {
+            margin-bottom: 1rem !important;
+        }
+
+        .bg-gray-300 {
+            background-color: #e2e8f0;
+        }
+
+        .h-100 {
+            height: 100% !important;
+        }
+
+        .shadow-none {
+            box-shadow: none !important;
+        }
+    </style>
+    <!-- Custom fonts for this template-->
+    <link href="./search_files/all.min.css" rel="stylesheet" type="text/css">
+    <link href="./search_files/css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="./search_files/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="./search_files/bootstrap.min.js.download"></script>
+    <script src="./search_files/jquery.min.js.download"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+</head>
+
+<body id="page-top">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+
+        <div id="login" style="display:block">
+            <h3 class="text-center text-white pt-5">Check Patient Details</h3>
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
+                            <form id="login-form" class="form" action="submit.php" method="post">
+                                <h3 class="text-center text-info">Patient Details</h3>
+                                <div class="form-group">
+                                    <label for="username" class="text-info">Patient Name:</label><br>
+                                    <input type="text" name="search" id="username" class="form-control" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-info">Patient Id:</label><br>
+                                    <input type="text" name="dropdown" id="password" class="form-control"
+                                        required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="submit" class="btn btn-info btn-md"
+                                        value="Check Details">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="content">
+            <!-- Topbar -->
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <?php
+    include "../footer.php"
+    ?>
