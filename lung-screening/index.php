@@ -210,7 +210,7 @@ font-style: normal;color:rgb(103,42,133);">See if you qualify</p>
                 </div>
             </div>
 
-            <div class="col-lg-12">
+            <!--   <div class="col-lg-12">
                 <div class="p-t-10 p-b-50 m-t-5 m-b-40 p-20"
                     style="border: 1px solid #ccc; padding-left:10px;padding-right:10px; background-color: rgba(187,198,226,.05);">
 
@@ -249,10 +249,10 @@ font-style: normal;color:rgb(103,42,133);">See if you qualify</p>
                                 <br>
                             </div>
                             <br>
-                            <!--  <div class="form-group">
+                             <div class="form-group">
                                             <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                                             <div class="g-recaptcha" data-sitekey="6LddCxAUAAAAAKOg0-U6IprqOZ7vTfiMNSyQT2-M"></div>
-                                        </div>  -->
+                                        </div>   
                             <center>
                                 <div id="error-box" style="display:none;"></div>
                                 <button class="btn g-recaptcha"
@@ -272,7 +272,7 @@ font-style: normal;color:rgb(103,42,133);">See if you qualify</p>
 
                 </div>
             </div>
-
+-->
             <div class="col-lg-12">
                 <div class="row m-t-20 m-b-40 searchable" style="font-size:90%;padding:10px;">
                     <p>
@@ -349,154 +349,154 @@ font-style: normal;color:rgb(103,42,133);">See if you qualify</p>
     </div>
 </section>
 <script>
-    function phoneNumberCheck(phoneNumber) {
-        var reg = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-        if (phoneNumber.match(reg)) {
-            return true;
-        } else {
-            //alert("Please enter a valid phone number.");
-            return false;
-        }
+function phoneNumberCheck(phoneNumber) {
+    var reg = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (phoneNumber.match(reg)) {
+        return true;
+    } else {
+        //alert("Please enter a valid phone number.");
+        return false;
+    }
+}
+
+function validateEmail(email) {
+    const res =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return res.test(String(email).toLowerCase());
+}
+
+
+function onSubmit(token) {
+    //alert("yo");
+    //return;
+    var error_text = 'Please enter:\n'
+    var good = true;
+
+    document.getElementById('name').style = "border: 1px solid #e6e8eb;";
+    document.getElementById('email').style = "border: 1px solid #e6e8eb;";
+    document.getElementById('phone').style = "border: 1px solid #e6e8eb;";
+
+    if (document.getElementById('name').value == "") {
+        document.getElementById('name').style = "border: 1px solid red;";
+        error_text = error_text + "Your name\n";
+        good = false;
     }
 
-    function validateEmail(email) {
-        const res =
-            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return res.test(String(email).toLowerCase());
+    if (phoneNumberCheck(document.getElementById('phone').value)) {
+
+    } else {
+
+        document.getElementById('phone').style = "border: 1px solid red;";
+        error_text = error_text + "A valid phone number\n";
+        good = false;
     }
 
-
-    function onSubmit(token) {
-        //alert("yo");
-        //return;
-        var error_text = 'Please enter:\n'
-        var good = true;
-
-        document.getElementById('name').style = "border: 1px solid #e6e8eb;";
-        document.getElementById('email').style = "border: 1px solid #e6e8eb;";
-        document.getElementById('phone').style = "border: 1px solid #e6e8eb;";
-
-        if (document.getElementById('name').value == "") {
-            document.getElementById('name').style = "border: 1px solid red;";
-            error_text = error_text + "Your name\n";
-            good = false;
-        }
-
-        if (phoneNumberCheck(document.getElementById('phone').value)) {
-
-        } else {
-
-            document.getElementById('phone').style = "border: 1px solid red;";
-            error_text = error_text + "A valid phone number\n";
-            good = false;
-        }
-
-        if (validateEmail(document.getElementById('email').value)) {
+    if (validateEmail(document.getElementById('email').value)) {
 
 
-        } else {
-            document.getElementById('email').style = "border: 1px solid red;";
-            error_text = error_text + "A valid email\n";
-            good = false;
+    } else {
+        document.getElementById('email').style = "border: 1px solid red;";
+        error_text = error_text + "A valid email\n";
+        good = false;
 
-        }
-
-        if (good) {
-            document.getElementById("rsform").submit();
-        } else {
-
-
-            document.getElementById('error-box').innerText = error_text + "\n";
-            document.getElementById('error-box').style.display = 'block';
-            return;
-        }
     }
 
-    function onSecondSubmit(token) {
-
-        //return;
-        var error_text = 'Please enter:\n'
-        var good = true;
-
-        document.getElementById('age').style = "border: 1px solid #e6e8eb;";
-        //alert("age");
-        document.getElementById('smyrs').style = "border: 1px solid #e6e8eb;";
-        //alert("smyrs");
-        document.getElementById('history').style = "border: 1px solid #e6e8eb;";
-        //alert("hst");
-        document.getElementById('pkcnt').style = "border: 1px solid #e6e8eb;";
-        //alert("pkc");
-        document.getElementById('asb').style = "border: 1px solid #e6e8eb;";
-
-        //alert("ok");
+    if (good) {
+        document.getElementById("rsform").submit();
+    } else {
 
 
-        if (document.getElementById('age').value == "") {
+        document.getElementById('error-box').innerText = error_text + "\n";
+        document.getElementById('error-box').style.display = 'block';
+        return;
+    }
+}
+
+function onSecondSubmit(token) {
+
+    //return;
+    var error_text = 'Please enter:\n'
+    var good = true;
+
+    document.getElementById('age').style = "border: 1px solid #e6e8eb;";
+    //alert("age");
+    document.getElementById('smyrs').style = "border: 1px solid #e6e8eb;";
+    //alert("smyrs");
+    document.getElementById('history').style = "border: 1px solid #e6e8eb;";
+    //alert("hst");
+    document.getElementById('pkcnt').style = "border: 1px solid #e6e8eb;";
+    //alert("pkc");
+    document.getElementById('asb').style = "border: 1px solid #e6e8eb;";
+
+    //alert("ok");
+
+
+    if (document.getElementById('age').value == "") {
+
+        document.getElementById('age').style = "border: 1px solid red;";
+        error_text = error_text + "Your Age\n";
+        good = false;
+    } else {
+        if (isNaN(document.getElementById('age').value)) {
 
             document.getElementById('age').style = "border: 1px solid red;";
             error_text = error_text + "Your Age\n";
             good = false;
-        } else {
-            if (isNaN(document.getElementById('age').value)) {
-
-                document.getElementById('age').style = "border: 1px solid red;";
-                error_text = error_text + "Your Age\n";
-                good = false;
-            }
         }
+    }
 
-        var hst = document.getElementById("history");
+    var hst = document.getElementById("history");
 
 
-        if (hst.value == "Please select one option") {
-            document.getElementById('history').style = "border: 1px solid red;";
-            error_text = error_text + "Your Smoking History\n";
+    if (hst.value == "Please select one option") {
+        document.getElementById('history').style = "border: 1px solid red;";
+        error_text = error_text + "Your Smoking History\n";
+        good = false;
+    }
+
+    var abv = document.getElementById("asb");
+
+    if (abv.value == "Please select one option") {
+        document.getElementById('asb').style = "border: 1px solid red;";
+        error_text = error_text + "Your Asbestos History\n";
+        good = false;
+    }
+
+    if (hst.value == '0') {
+        document.getElementById('smyrs').value = 0
+    } else {
+
+        if (document.getElementById('smyrs').value == "") {
+            document.getElementById('smyrs').style = "border: 1px solid red;";
+            error_text = error_text + "Your Years Smoking\n";
             good = false;
-        }
-
-        var abv = document.getElementById("asb");
-
-        if (abv.value == "Please select one option") {
-            document.getElementById('asb').style = "border: 1px solid red;";
-            error_text = error_text + "Your Asbestos History\n";
-            good = false;
-        }
-
-        if (hst.value == '0') {
-            document.getElementById('smyrs').value = 0
         } else {
-
-            if (document.getElementById('smyrs').value == "") {
+            if (isNaN(document.getElementById('smyrs').value)) {
                 document.getElementById('smyrs').style = "border: 1px solid red;";
                 error_text = error_text + "Your Years Smoking\n";
                 good = false;
-            } else {
-                if (isNaN(document.getElementById('smyrs').value)) {
-                    document.getElementById('smyrs').style = "border: 1px solid red;";
-                    error_text = error_text + "Your Years Smoking\n";
-                    good = false;
-                }
             }
-
-            var pkv = document.getElementById("pkcnt");
-            if (pkv.value == "Please select one option if current or former smoker") {
-                document.getElementById('pkcnt').style = "border: 1px solid red;";
-                error_text = error_text + "Your Number of Packs\n";
-                good = false;
-            }
-
         }
 
-        if (good) {
-            document.getElementById("rsform2").submit();
-        } else {
-
-
-            document.getElementById('error-box').innerText = error_text + "\n";
-            document.getElementById('error-box').style.display = 'block';
-            return;
+        var pkv = document.getElementById("pkcnt");
+        if (pkv.value == "Please select one option if current or former smoker") {
+            document.getElementById('pkcnt').style = "border: 1px solid red;";
+            error_text = error_text + "Your Number of Packs\n";
+            good = false;
         }
+
     }
+
+    if (good) {
+        document.getElementById("rsform2").submit();
+    } else {
+
+
+        document.getElementById('error-box').innerText = error_text + "\n";
+        document.getElementById('error-box').style.display = 'block';
+        return;
+    }
+}
 </script>
 
 
