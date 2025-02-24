@@ -54,7 +54,7 @@ include "../header.php"
     <ul>
 
         <li class="d-none d-xl-block d-lg-block">
-            <a href="<?php echo $url; ?>/appointment.php" class="btn btn-rounded btn-sm"
+            <a href="<?php echo $url; ?>/contact.php" class="btn btn-rounded btn-sm"
                 style="background-color: rgb(76,66,135);border-color: rgb(76,66,135); color: #FFF;">Make
                 Appointment</a>
         </li>
@@ -217,7 +217,7 @@ include "../header.php"
                                 <p dir="ltr"><span
                                         id="docs-internal-guid-bbf7f484-7fff-e570-ac31-f038888a82e2"><br /><span>Don't
                                             wait till it's too late. </span><a
-                                            href="<?php echo $url; ?>/appointment.php"><span>Schedule
+                                            href="<?php echo $url; ?>/contact.php"><span>Schedule
                                             </span></a><span>your low-dose CT scan at <?php echo $name; ?> today and take
                                             the first step toward early detection and management of lung
                                             cancer.</span></span></p>

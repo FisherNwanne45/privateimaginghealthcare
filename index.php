@@ -104,7 +104,7 @@ include "header.php"
 
 <div class="slide background-image" style="background-image:url('media/assets/NYI_RedesignedWebSliders_R3-03.png');">
 
-    <a href="<?php echo $url; ?>/appointment.php">
+    <a href="<?php echo $url; ?>/contact.php">
 
         <div class="bg-overlay"></div>
 

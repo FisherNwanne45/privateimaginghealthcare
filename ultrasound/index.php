@@ -54,7 +54,7 @@ include "../header.php"
     <ul>
 
         <li class="d-none d-xl-block d-lg-block">
-            <a href="<?php echo $url; ?>/appointment.php" class="btn btn-rounded btn-sm"
+            <a href="<?php echo $url; ?>/contact.php" class="btn btn-rounded btn-sm"
                 style="background-color: rgb(76,66,135);border-color: rgb(76,66,135); color: #FFF;">Make
                 Appointment</a>
         </li>
@@ -297,7 +297,7 @@ include "../header.php"
                     To schedule an appointment by phone call<?php echo $phone; ?> .
                 </p>
             </div>
-            <div class="col-lg-3"><a class="btn btn-light" href="<?php echo $url; ?>/appointment.php"
+            <div class="col-lg-3"><a class="btn btn-light" href="<?php echo $url; ?>/contact.php"
                     style="margin-top:70px;">Request Appointment Now</a></div>
         </div>
     </div>

@@ -51,7 +51,7 @@ include "header.php"
     <ul>
 
         <li class="d-none d-xl-block d-lg-block">
-            <a href="<?php echo $url; ?>/appointment.php" class="btn btn-rounded btn-sm"
+            <a href="<?php echo $url; ?>/contact.php" class="btn btn-rounded btn-sm"
                 style="background-color: rgb(76,66,135);border-color: rgb(76,66,135); color: #FFF;">Make
                 Appointment</a>
         </li>
@@ -253,7 +253,7 @@ include "header.php"
 <div class="slide background-image"
     style="background-image:url('media/assets/NYI_RedesignedWebSliders_R3-03.png');">
 
-    <a href="<?php echo $url; ?>/appointment.php">
+    <a href="<?php echo $url; ?>/contact.php">
 
         <div class="bg-overlay"></div>
 

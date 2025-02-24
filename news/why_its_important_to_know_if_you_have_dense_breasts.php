@@ -211,7 +211,7 @@
      <ul>
 
          <li class="d-none d-xl-block d-lg-block">
-             <a href="<?php echo $url; ?>/appointment.php" class="btn btn-rounded btn-sm" style="background-color: rgb(76,66,135);border-color: rgb(76,66,135); color: #FFF;">Make Appointment</a>
+             <a href="<?php echo $url; ?>/contact.php" class="btn btn-rounded btn-sm" style="background-color: rgb(76,66,135);border-color: rgb(76,66,135); color: #FFF;">Make Appointment</a>
          </li>
 
      </ul>

@@ -54,7 +54,7 @@ include "../header.php"
     <ul>
 
         <li class="d-none d-xl-block d-lg-block">
-            <a href="<?php echo $url; ?>/appointment.php" class="btn btn-rounded btn-sm"
+            <a href="<?php echo $url; ?>/contact.php" class="btn btn-rounded btn-sm"
                 style="background-color: rgb(76,66,135);border-color: rgb(76,66,135); color: #FFF;">Make
                 Appointment</a>
         </li>
@@ -218,7 +218,7 @@ include "../header.php"
                                     technologists at our imaging center are dedicated to providing the highest
                                     quality of care and accurate results. If you have any concerns about your
                                     heart health, talk to your doctor and <a
-                                        href="<?php echo $url; ?>/appointment.php">schedule an appointment f</a>or
+                                        href="<?php echo $url; ?>/contact.php">schedule an appointment f</a>or
                                     diagnostic imaging at our center.</p>
                                 <p><span>&nbsp;</span></p>
                             </div>

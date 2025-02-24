@@ -211,7 +211,7 @@
      <ul>
 
          <li class="d-none d-xl-block d-lg-block">
-             <a href="<?php echo $url; ?>/appointment.php" class="btn btn-rounded btn-sm" style="background-color: rgb(76,66,135);border-color: rgb(76,66,135); color: #FFF;">Make Appointment</a>
+             <a href="<?php echo $url; ?>/contact.php" class="btn btn-rounded btn-sm" style="background-color: rgb(76,66,135);border-color: rgb(76,66,135); color: #FFF;">Make Appointment</a>
          </li>
 
      </ul>
@@ -315,7 +315,7 @@
      <div class="row">
          <div class="col-lg-6">
              <br>
-             <a class="btn" style="background-color:rgb(88,59,146);border-color:rgb(88,59,146);" href="<?php echo $url; ?>/appointment.php">Request Appointment Online</a>
+             <a class="btn" style="background-color:rgb(88,59,146);border-color:rgb(88,59,146);" href="<?php echo $url; ?>/contact.php">Request Appointment Online</a>
              <br>
              <br>
              <div class="card">
